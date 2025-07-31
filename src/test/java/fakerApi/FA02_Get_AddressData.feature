@@ -1,4 +1,4 @@
-Feature:
+Feature: FA02 Kullanici Get request sonucu donen response test eder
 
   Scenario: TC02 Get request'e donen response'in beklenilen ozelliklerde olmasi gerekir
 
