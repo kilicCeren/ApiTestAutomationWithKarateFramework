@@ -1,0 +1,11 @@
+{
+  "firstname": "Ceren",
+  "lastname": "Kılıç",
+  "totalprice": 500,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2026-01-10",
+    "checkout": "2026-01-20"
+  },
+  "additionalneeds": "wi-fi"
+}
