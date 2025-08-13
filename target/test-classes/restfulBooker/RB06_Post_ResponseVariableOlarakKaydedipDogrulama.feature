@@ -1,6 +1,6 @@
 Feature: Kullanici Post request sonucu donen response test eder
 
-  Scenario:  TC01 Post request'e donen response'u kaydetip beklenilen ozelliklerde olmasi gerekir
+  Scenario:  TC01 Post request'e donen response'u kaydedip beklenilen ozelliklerde olmasi gerekir
     * def requestBody = read("rb_td_request.json")
     Given url 'https://restful-booker.herokuapp.com/booking'
     And header Content-Type = 'application/json'
