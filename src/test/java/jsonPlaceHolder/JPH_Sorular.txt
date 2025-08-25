@@ -1,0 +1,129 @@
+Q1: JPH01_Get__ResponseAssertions.feature
+
+https://jsonplaceholder.typicode.com/posts/44 url’ine bir GET request yolladigimizda
+donen Response’un
+status code’unun 200,
+content type’inin “application/json; charset=utf-8”,
+response body’sinde bulunan userId’nin 5,
+response body’sinde bulunan id’nin 44, 
+responseTime değerinin 2000 ms’den küçük oldugunu test edin.
+
+
+Q2: JPH02_Put__ResponseAssertions.feature
+
+https://jsonplaceholder.typicode.com/posts/70 url’ine 
+asagidaki body’e sahip bir PUT request yolladigimizda
+donen Response’un
+status code’unun 200,
+content type’inin “application/json; charset=utf-8”,
+Connection header degerinin “keep-alive”
+Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+
+Request body
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+Response body (Expected Data)
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+
+
+Q3: JPH03_TestDatalariniFeatureIcindeTanimlama.feature
+
+JPH02_Put__ResponseAssertions feature’indaki 
+baseUrl,
+path parametreleri,
+request body
+ve expected Response Body bilgilerini feature içinde testten once tanimlayalim.
+
+https://jsonplaceholder.typicode.com/posts/70 url’ine 
+asagidaki body’e sahip bir PUT request yolladigimizda
+donen Response’un
+status code’unun 200,
+content type’inin “application/json; charset=utf-8”,
+Connection header degerinin “keep-alive”
+Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+
+Request body
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+Response body (Expected Data)
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+
+
+Q4: JPH04_FeatureDisindanJsonObjeKullanma.feature
+
+JPH03_TestDatalariniFeatureIcindeTanimlama feature’inda tanimladigimiz request body ve expected Response Body JSON objelerini ayri bir .json dosyasinda tanimlayalim. 
+https://jsonplaceholder.typicode.com/posts/70 url’ine 
+asagidaki body’e sahip bir PUT request yolladigimizda
+donen Response’un
+status code’unun 200,
+Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+
+Request body
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+Response body (Expected Data)
+{
+"title":"Ceren",
+"body":"Merhaba",
+"userId":"10",
+"id":70
+}
+
+
+Q5: JPH05_TestDatalarindaDegisiklikYapma.feature
+
+JPH04_FeatureDisindanJsonObjeKullanma feature’inda ayri bir json dosyasinda olusturdugumuz
+Request body
+Ve expected Response Body 
+objelerini kullanalim
+Ama
+Test icinde
+title: Karate 
+body: Framework
+seklinde değişiklik yapalim. Ayrıca dönen response’un status code’unun 200, Content-Type header’ının application/json; charset=utf-8 ve Connection header’ının keep-alive olduğunu test edelim.
+
+
+Q6: JPH06_Post.feature
+
+https://jsonplaceholder.typicode.com/posts adresine, dış bir .json dosyasından okunan request body ile bir POST request yolladığımızda dönen Response’un
+status code’unun 201,
+Content-Type header’ının application/json; charset=utf-8,
+Connection header’ının keep-alive,
+response body’sinde
+title alanının "Ceren",
+body alanının "Merhaba",
+userId alanının 10
+olduğunu test edelim.
+
+
+Q7: JPH07_Patch.feature
+
+https://jsonplaceholder.typicode.com/posts/71 adresine aşağıdaki body ile bir PATCH request yolladığımızda dönen Response’un
+status code’unun 200,
+response body’sinde
+title alanının "Amelie",
+body alanının "Kilic",
+userId alanının 8
+olduğunu test edelim.
