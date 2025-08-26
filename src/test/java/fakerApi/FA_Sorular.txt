@@ -1,0 +1,39 @@
+Q1: FA01_Get_PersonData.feature
+
+https://fakerapi.it/api/v1/persons?_quantity=1 url’ine bir GET request yolladığımızda dönen Response’un
+status code’unun 200,
+content type’ının “application/json”,
+response body’sinde gelen kişinin firstname alanının boş olmaması,
+response body’sinde gelen kişinin lastname alanının boş olmaması
+gerektiğini test edelim.
+
+
+Q2: FA02_Get_AddressData.feature
+
+https://fakerapi.it/api/v1/addresses?_quantity=1 url’ine bir GET request yolladığımızda dönen Response’un
+status code’unun 200,
+content type’ının “application/json”,
+response body’sinde dönen adres bilgisinde city alanının boş olmaması,
+response body’sinde dönen adres bilgisinde country alanının string bir değer içerdiğinin kontrol edilmesi gerektiğini test edelim.
+
+
+Q3: FA03_Get_CompanyData.feature
+
+https://fakerapi.it/api/v1/companies?_quantity=1 url’ine bir GET request yolladığımızda dönen Response’un
+status code’unun 200,
+content type’ının “application/json”,
+response body’sinde dönen company name alanının boş olmaması,
+response body’sinde dönen email alanının “@” işareti içermesi,
+response body’sinde dönen phone alanının rakam, + ve - karakterlerinden oluşması
+gerektiğini test edelim.
+
+
+Q4: FA04_Get_ProductData.feature
+
+https://fakerapi.it/api/v1/products?_quantity=1 url’ine bir GET request yolladığımızda dönen Response’un
+status code’unun 200,
+content type’ının “application/json”,
+response body’sinde dönen product name alanının boş olmaması,
+response body’sinde dönen price alanının 0’dan büyük olması,
+response body’sinde dönen categories alanının boş olmaması
+gerektiğini test edelim.
