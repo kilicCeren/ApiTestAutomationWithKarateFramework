@@ -6,7 +6,7 @@ status code’unun 200,
 content type’inin “application/json; charset=utf-8”,
 response body’sinde bulunan userId’nin 5,
 response body’sinde bulunan id’nin 44, 
-responseTime değerinin 2000 ms’den küçük oldugunu test edin.
+responseTime değerinin 2000 ms’den küçük oldugunu test edelim.
 
 
 Q2: JPH02_Put__ResponseAssertions.feature
@@ -17,7 +17,7 @@ donen Response’un
 status code’unun 200,
 content type’inin “application/json; charset=utf-8”,
 Connection header degerinin “keep-alive”
-Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+Ve response body’sinin asagida verilen ile ayni olduğunu test edelim.
 
 Request body
 {
@@ -49,7 +49,7 @@ donen Response’un
 status code’unun 200,
 content type’inin “application/json; charset=utf-8”,
 Connection header degerinin “keep-alive”
-Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+Ve response body’sinin asagida verilen ile ayni olduğunu test edelim.
 
 Request body
 {
@@ -74,7 +74,7 @@ https://jsonplaceholder.typicode.com/posts/70 url’ine
 asagidaki body’e sahip bir PUT request yolladigimizda
 donen Response’un
 status code’unun 200,
-Ve response body’sinin asagida verilen ile ayni olduğunu test ediniz.
+Ve response body’sinin asagida verilen ile ayni olduğunu test edelim.
 
 Request body
 {
