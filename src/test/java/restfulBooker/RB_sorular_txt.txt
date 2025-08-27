@@ -1,0 +1,93 @@
+Q1 : RB01_Post_TestDatalariniScenarioIcindeTanimlama.feature
+
+https://restful-booker.herokuapp.com/booking url’ine aşağıdaki body’e
+sahip bir POST request yolladığımızda dönen Response’un status code’unun
+200 olduğunu, response body’sinde gönderilen request body ile aynı
+verilerin döndüğünü test edelim.
+
+Request Body { “firstname”: “Ceren”, “lastname”: “Kılıç”, “totalprice”:
+500, “depositpaid”: false, “bookingdates”: { “checkin”: “2026-01-10”,
+“checkout”: “2026-01-20” }, “additionalneeds”: “wi-fi” }
+
+Q2: RB02_Post_ScenarioIcindeJsonObjeKullanma.feature
+
+https://restful-booker.herokuapp.com/booking url’ine rb_td_request.json
+dosyasında tanımlanmış request body ile bir POST request yolladığımızda
+dönen Response’un status code’unun 200, response body’sinde gönderilen
+request body ile aynı verilerin döndüğünü test edelim.
+
+Q3: RB03_Post_BackgroundIcindeJsonObjeKullanma.feature
+
+https://restful-booker.herokuapp.com/booking url’ine Background altında,
+rb_td_request.json dosyasından okunan request body ile bir POST request
+yolladığımızda dönen Response’un status code’unun 200, response
+body’sinde gönderilen request body ile aynı verilerin döndüğünü test
+edin.
+
+Q4: RB04_Post_AssertVeMatchKullanimFarki.feature
+
+https://restful-booker.herokuapp.com/booking url’ine Background altında,
+rb_td_request.json dosyasından okunan request body ile bir POST request
+yolladığımızda dönen Response’un status code’unun 200, response
+body’sinde gönderilen request body ile aynı verilerin döndüğünü assert
+ve match methodları kullanarak test edelim.
+
+Q5: RB05_Post_ScenarioOutlineIleCokluPost.feature
+
+https://restful-booker.herokuapp.com/booking url’ine Scenario Outline
+kullanılarak farklı rezervasyon bilgileriyle art arda POST request’ler
+gönderildiğinde dönen Response’un status code’unun 200, her bir request
+için yeni rezervasyon oluşturulduğunu test edelim.
+
+Q6: RB06_Post_ResponseVariableOlarakKaydedipDogrulama.feature
+
+https://restful-booker.herokuapp.com/booking url’ine rb_td_request.json
+dosyasından okunan request body ile bir POST request yolladığımızda
+dönen Response’un status code’unun 200, Response’un bir değişkene
+kaydedildikten sonra alan bazlı doğrulamalarla request body’deki
+verilerle aynı olduğunu test edelim.
+
+Q7: RB07_Post_ScenarioOutline_ResponseKaydedipDogrulama.feature
+
+https://restful-booker.herokuapp.com/booking url’ine Scenario Outline
+kullanılarak farklı rezervasyon bilgileriyle art arda POST request’ler
+gönderildiğinde dönen Response’u kaydedin ve status code’unun 200
+olduğunu, kaydedilen response içindeki alanların gönderilen verilerle
+aynı olduğunu test edelim.
+
+Q8 : RB08_Delete.feature
+
+https://restful-booker.herokuapp.com/booking endpoint’ine bir POST
+request gönderip yeni bir booking oluşturun. Oluşan booking’i DELETE
+request ile silin. Silindiğini GET request ile doğrulayın ve status
+code’unun 404 olduğunu test edelim.
+
+Q9 : RB09_BackgroundIlePostDeleteGetSenaryosu.feature
+
+https://restful-booker.herokuapp.com/booking endpoint’ine bir POST
+request göndererek yeni bir booking oluşturun. Background kullanarak
+base URL, request body ve auth bilgilerini tanımlayın. Oluşturulan
+booking’i DELETE request ile silin. Silindiğini GET request ile
+doğrulayın ve status code’unun 404 olduğunu test edelim.
+
+Q10 : RB10_Patch.feature
+
+https://restful-booker.herokuapp.com/booking endpoint’ine bir POST
+request göndererek yeni bir booking oluşturun. Bu token ile PATCH
+request göndererek yalnızca firstname ve lastname alanlarını
+güncelleyin. PATCH sonrası dönen response’u doğrulayın. Son olarak bir
+GET request ile güncellemenin başarılı olduğunu kontrol edelim.
+
+Q11 : RB11_Put.feature
+
+https://restful-booker.herokuapp.com/booking endpoint’ine bir POST
+request göndererek yeni bir booking oluşturun. Bu token kullanılarak PUT
+request gönderip booking’in tüm alanlarını (firstname, lastname,
+totalprice, depositpaid, bookingdates, additionalneeds) güncelleyin. PUT
+sonrası dönen response’u doğrulayın. Son olarak bir GET request ile
+güncellemenin başarılı olduğunu kontrol edelim.
+
+Q12 : RB12_Get.feature
+
+https://restful-booker.herokuapp.com/booking/70 endpoint’ine GET request
+gönderin ve dönen response’un beklenilen özelliklerde olduğunu test edelim.
