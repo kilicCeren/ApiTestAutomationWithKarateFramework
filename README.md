@@ -42,4 +42,47 @@
              │   └── TestRunner.java # Testleri tetikleyen Java sınıfı
              └── logback-test.xml # Loglama yapılandırması
  ```
- 
+
+---
+
+## :test_tube: Test Yaklaşımı (Karate DSL)
+Karate, geleneksel Cucumber'dan farklı olarak adım tanımlamaları (step definitions) gerektirmez. Doğrudan .feature dosyası içinde API çağrıları yapılır.
+
+Örnek Feature Dosyası
+```
+Feature: Karate User API Test
+  Background:
+    * url '[https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)'
+
+  Scenario: Get user details and verify
+    Given path '/users/1'
+    When method get
+    Then status 200
+    And match response.name == 'Leanne Graham'
+    And match response.address.city == 'Gwenborough'
+```
+---
+    
+## :mag: Kapsanan Test Senaryoları
+* GET, POST, PUT, DELETE metotları ile API etkileşimi
+* JSON gövdesi (body) üzerinde derinlemesine doğrulama (match)
+* Query ve Path parametrelerinin dinamik kullanımı
+* Header ve Authentication (Token/Auth) yönetimi
+* karate-config.js ile farklı ortamlara (dev/test/prod) kolay geçiş
+* Karmaşık JSON yapılarını tek satırda doğrulama
+
+---
+
+## :gear: karate-config.js
+Bu dosya, testlerin hangi URL'e gideceğini ve hangi global değişkenleri kullanacağını belirler. Örnek içeriği:
+
+```
+
+function fn() {
+  var config = {
+    baseUrl: '[https://api.example.com](https://api.example.com)',
+    myVarName: 'someValue'
+  };
+  return config;
+}
+```
