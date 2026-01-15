@@ -1,4 +1,5 @@
- Bu repository, **Karate Framework** kullanılarak geliştirilmiş, **REST API test otomasyonu** çalışmalarını içeren bir projedir.  
+# ApiTestAutomationWithKarateFramework 
+Bu repository, **Karate Framework** kullanılarak geliştirilmiş, **REST API test otomasyonu** çalışmalarını içeren bir projedir.  
  Proje, **Behavior Driven Development (BDD)** yaklaşımı ile API testlerini herhangi bir Java "step definition" koduna ihtiyaç duymadan, Karate'nin kendi DSL (Domain Specific Language) yapısı ile gerçekleştirmektedir.
  
  Amaç; API endpoint'lerinin doğruluğunu **hızlı, etkili ve okunabilir** test senaryoları ile teminat altına almaktır.
