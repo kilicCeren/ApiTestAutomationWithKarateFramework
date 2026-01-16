@@ -87,3 +87,49 @@ function fn() {
   return config;
 }
 ```
+---
+
+## :rocket: Projeyi Çalıştırma
+### Ön Gereksinimler
+* Java JDK 11 veya üzeri
+* Maven
+* IDE (IntelliJ IDEA veya VS Code)
+
+### Kurulum ve Çalıştırma
+
+Repository'i klonlayın:
+```
+git clone https://github.com/kilicCeren/ApiTestAutomationWithKarateFramework.git
+```
+### Testleri çalıştırın:
+```
+mvn clean test
+```
+
+### Belirli bir testi veya dizini çalıştırmak için:
+```
+mvn test -Dkarate.options="classpath:examples/users"
+```
+
+---
+
+## :bar_chart: Test Sonuçları ve Raporlama
+* Karate, testler bittiğinde otomatik olarak görsel ve detaylı HTML raporları üretir.
+* HTML Raporu: target/karate-reports/karate-summary.html Bu rapor üzerinden HTTP isteklerini, dönen response gövdelerini ve geçen/kalan testleri görebilirsiniz.
+
+### Projenin Sağladıkları
+* Java kodu yazmadan güçlü API testleri
+* Native JSON desteği ile kolay veri doğrulaması
+* Hızlı geliştirme ve düşük bakım maliyeti
+* Dahili raporlama sistemi
+
+---
+
+## :pushpin: Notlar
+Bu proje Karate Framework yeteneklerini sergilemek amacıyla hazırlanmıştır.
+UI otomasyonu içermez, tamamen API odaklıdır.
+
+---
+
+## :memo: Lisans
+Bu proje kişisel eğitim ve portföy amaçlıdır.
